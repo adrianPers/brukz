@@ -1,0 +1,102 @@
+header {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.logoHeader {
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.navHeader{
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    transition: 0.5s;
+}
+
+.navHeader ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    
+}
+
+
+.navHeader ul li{
+    /* background-color: blue; */
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    /* font-weight: bold; */
+    font-size: large;
+}
+
+.navHeader ul li:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+
+    /* background-color: aliceblue; */
+    border: 0px;
+    padding: 10px;
+    transition: 0.5s;
+    /* border-radius: 10px; */
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button svg{
+    font-size: 2rem;
+    color:  white;
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .navHeader {
+        background-color: rgb(241, 241, 241);
+        position: absolute;
+        width: 80%;
+        left: 0px;
+        height: 100vh;
+        top: 0px;
+    }
+
+    .navHeader ul {
+        list-style: none;
+        width: 100%;
+        /* background-color: aqua; */
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0px;
+    }
+
+    .navHeader ul li {
+        padding: 15px;
+        border-block: 1px solid rgba(0, 0, 0, 0.5);
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        flex: 0;
+    }
+}
