@@ -2,7 +2,7 @@ import styles from './Home.module.css'
 
 // components
 import Header from '../../components/Header/Header.jsx'
-import Product from '../../components/Product/product.jsx'
+import Product from '../../components/Product/Product.jsx'
 import Slide from '../../components/Slide/Slide.jsx'
 
 // import { useState } from 'react'
