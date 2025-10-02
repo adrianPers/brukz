@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import styles from './app.module.css'
 
@@ -15,19 +15,10 @@ import RoutesApp from './router.jsx'
 
 const App = () => {
 
-  const [product, setProduct] = useState({
-    name : 'Tete'
-  })
-
   return (
     <div className={styles.app}>
 
-      <RoutesApp
-        product={{
-          dataProduct: product,
-          defProduct: setProduct
-        }}
-      />
+      <RoutesApp />
 
     </div>
   )

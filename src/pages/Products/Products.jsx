@@ -1,14 +1,14 @@
 
-import styles from './Products.module.css'
+// import styles from './Products.module.css'
 
-import Header from '../../components/Header/Header'
+// import Header from '../../components/Header/Header'
 
-const Products = () => {
-    return(
-        <div className={styles.pageProducts} >
-            <Header />
-        </div>
-    )
-}
+// const Products = () => {
+//     return(
+//         <div className={styles.pageProducts} >
+//             <Header />
+//         </div>
+//     )
+// }
 
-export default Products
+// export default Products

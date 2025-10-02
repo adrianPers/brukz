@@ -1,4 +1,4 @@
-
+/* 
 .boxProduct{
     background-color: rgb(236, 236, 236);
     border: 1px solid gray;
@@ -20,7 +20,6 @@
 .boxInfoProdutos{
     background-color: aqua;
     padding: 15px;
-    /* display: flex; */
     flex-direction: column;
     gap: 5px;
 }
@@ -28,4 +27,4 @@
 .boxInfoProdutos > *{
     border: 1px solid gray;
 
-}
+} */

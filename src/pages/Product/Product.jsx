@@ -1,12 +1,12 @@
 
-import styles from './Product.module.css'
+// import styles from './Product.module.css'
 
-const Product = (props) => {
-    return(
-        <div className={styles.pageProduct}>
-            <h2>{props.dataProduct.name}</h2>
-        </div>
-    )
-}
+// const Product = (props) => {
+//     return(
+//         <div className={styles.pageProduct}>
+//             <h2>{props.dataProduct.name}</h2>
+//         </div>
+//     )
+// }
 
-export default Product
+// export default Product

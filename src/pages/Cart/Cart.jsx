@@ -1,14 +1,14 @@
 
-import styles from './Cart.module.css'
+// import styles from './Cart.module.css'
 
-import Header from '../../components/Header/Header'
+// import Header from '../../components/Header/header'
 
-const Cart = () => {
-    return(
-        <div className={styles.pageCart}>
-            <Header />
-        </div>
-    )
-}
+// const Cart = () => {
+//     return(
+//         <div className={styles.pageCart}>
+//             <Header />
+//         </div>
+//     )
+// }
 
-export default Cart
+// export default Cart

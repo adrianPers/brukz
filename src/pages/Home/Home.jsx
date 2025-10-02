@@ -1,21 +1,32 @@
 import styles from './Home.module.css'
 
 // components
-import Header from '../../components/Header/Header.jsx'
-import Product from '../../components/Product/Product.jsx'
-import Slide from '../../components/Slide/Slide.jsx'
+import Header from '../../components/Header/header.jsx'
+// import Product from '../../components/Product/Product.jsx'
+// import Slide from '../../components/Slide/Slide.jsx'
 
 // import { useState } from 'react'
 
-import { SwiperSlide } from 'swiper/react'
+// functions
+// import { getProducts } from '../../services/api.js';
+
+// import { SwiperSlide } from 'swiper/react'
 
 
-const Home = (props) => {
+const Home = () => {
+
+
+
     return (
         <div className={styles.home} >
             <Header />
 
-            <Slide>
+            {/* <button onClick={
+                async () => console.log(await getProducts())
+                
+            }>Teste</button> */}
+
+            {/* <Slide>
 
                  <SwiperSlide>
                     <Product
@@ -68,7 +79,7 @@ const Home = (props) => {
                     />
                 </SwiperSlide>
 
-            </Slide>
+            </Slide> */}
 
 
 
