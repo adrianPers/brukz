@@ -56,13 +56,13 @@ const Header = () => {
                             <Link to="produtos"> Produtos</Link>
                         </li>
                         <li>
-                            <a href="#">Prazo de Entregas</a>
+                            <p>Prazo de Entregas</p>
                         </li>
                         <li>
-                            <a href="#">Dúvidas</a>
+                            <p>Dúvidas</p>
                         </li>
                         <li>
-                            <a href="#">Contatos</a>
+                            <p>Contatos</p>
                         </li>
                     </ul>
                 </nav>
