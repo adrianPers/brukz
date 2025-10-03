@@ -5,11 +5,10 @@ import styles from './Header.module.css';
 import logo from '../../assets/logo-bz.png';
 
 import { useState } from 'react';
-import { Link } from 'react-router';
 
 
 // icons
-import { BsCart2, BsList } from "react-icons/bs";
+import { BsCart2, BsList, BsX, BsPerson } from "react-icons/bs";
 
 
 const Header = () => {
@@ -33,24 +32,28 @@ const Header = () => {
                     title='logo da loja' 
                 />
 
-                <Link to='/carrinho'>
+              
                     <button>
                         <BsCart2 />
                     </button>
-                </Link>
+    
 
                 <nav
                     className={styles.menuHeader}
-                    style={{ left: menu ? '0px' : '-101%' }}>
+                    style={{ left: menu ? '-1px' : '-102%' }}>
                     <ul>
                         <li className={styles.liBtnMenu}>
+                            <button>
+                            <BsPerson />
+                            Criar ou acessar conta
+                            </button>
                             <button
                                 onClick={() => setMenu((m) => m = !menu)}>
-                                X
+                                <BsX />
                             </button>
                         </li>
                         <li>
-                            <Link to="/"> Home</Link>
+                            <p> Home</p>
                         </li>
                         <li>
                             <p> Produtos</p>

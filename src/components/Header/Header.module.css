@@ -56,8 +56,8 @@ header{
 
 }
 
-.menuHeader li > *{
-    display: inline-block;
+.menuHeader li > p{
+    display: block;
     width: 100%;
     padding: 5px;
     text-decoration: none;
@@ -77,7 +77,7 @@ button:hover{
 }
 
 button svg{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color:  white;
 }
 
@@ -90,7 +90,7 @@ button svg{
     .menuHeader {
         background-color: rgb(255, 255, 255);
         position: absolute;
-        width: 100%;
+        width: 101%;
         left: 0px;
         height: 100vh;
         top: 0px;
@@ -106,18 +106,39 @@ button svg{
         justify-content: flex-start;
         gap: 0px;
         overflow: scroll;
+        padding: 0px;
     }
 
-    .menuHeader li, .liBtnMenu {
+    .menuHeader li{
         display: inline-block;
         border-block: 1px solid rgba(0, 0, 0, 0.5);
         width: 100%;
-        font-weight: bold;
+        font-weight: auto;
         flex: 0;
         text-align: left;
     }
 
-    .menuHeader li > *{
+    .liBtnMenu{
+        display: flex !important;
+        background-color: black;
+        justify-content: space-between;
+    }
+
+    .liBtnMenu:hover{
+        background-color: black !important;
+    }
+
+    .liBtnMenu button{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        /* background-color: aqua; */
+        font-size: 1.2em;
+        color: white;
+    }
+
+
+    .menuHeader li > p{
         padding: 15px;
         font-size: 1.5rem;
         color: rgb(0, 0, 0);
