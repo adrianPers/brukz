@@ -16,4 +16,4 @@ const RoutesApp = () => {
     )
 }
 
-export default RoutesApp
+export default RoutesApp;

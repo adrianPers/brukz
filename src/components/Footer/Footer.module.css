@@ -1,0 +1,16 @@
+
+.footer{
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.containerFooter{
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    border-inline: 1px solid white;
+    color: white;
+}

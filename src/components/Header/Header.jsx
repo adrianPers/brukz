@@ -1,10 +1,10 @@
 
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 
 //  imagens
-import logo from '../../assets/logo-bz.png';
+import logo from "../../assets/logo-bz.png";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 
 // icons
@@ -28,8 +28,8 @@ const Header = () => {
 
                 <img className={styles.logoHeader}
                     src={logo}
-                    alt='logo da loja'
-                    title='logo da loja' 
+                    alt="logo da loja"
+                    title="logo da loja" 
                 />
 
               
@@ -40,7 +40,7 @@ const Header = () => {
 
                 <nav
                     className={styles.menuHeader}
-                    style={{ left: menu ? '-1px' : '-102%' }}>
+                    style={{ left: menu ? "-1px" : "-102%" }}>
                     <ul>
                         <li className={styles.liBtnMenu}>
                             <button>

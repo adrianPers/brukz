@@ -1,25 +1,27 @@
-import styles from './Home.module.css'
+import styles from "./Home.module.css";
 
 // components
-import Header from '../../components/Header/Header'
-// import Product from '../../components/Product/Product.jsx'
-// import Slide from '../../components/Slide/Slide.jsx'
+import Page from "../../components/Page/Page";
 
-// import { useState } from 'react'
+// import Product from "../../components/Product/Product.jsx";
+// import Slide from "../../components/Slide/Slide.jsx";
+
+// import { useState } from "react";
 
 // functions
-// import { getProducts } from '../../services/api.js';
+// import { getProducts } from "../../services/api.js";
 
-// import { SwiperSlide } from 'swiper/react'
+// import { SwiperSlide } from "swiper/react";
 
 
 const Home = () => {
 
     return (
         <div className={styles.home} >
-            <Header />
+            <Page>
+            </Page>
         </div>
     )
 }
 
-export default Home
+export default Home;
