@@ -22,7 +22,7 @@ header{
 }
 
 .logoHeader {
-    height: 100px;
+    height: 80px;
     border-radius: 50%;
 }
 
@@ -77,7 +77,7 @@ button:hover{
 }
 
 button svg{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color:  white;
 }
 
@@ -122,6 +122,7 @@ button svg{
         display: flex !important;
         background-color: black;
         justify-content: space-between;
+        padding-block: 10px;
     }
 
     .liBtnMenu:hover{
@@ -133,14 +134,14 @@ button svg{
         align-items: center;
         gap: 5px;
         /* background-color: aqua; */
-        font-size: 1.2em;
+        font-size: 1em;
         color: white;
     }
 
 
     .menuHeader li > p{
         padding: 15px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: rgb(0, 0, 0);
     }
 }
