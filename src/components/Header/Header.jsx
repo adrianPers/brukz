@@ -1,5 +1,5 @@
 
-import styles from './header.module.css';
+import styles from './Header.module.css';
 
 //  imagens
 import logo from '../../assets/logo-bz.png';
@@ -53,7 +53,7 @@ const Header = () => {
                             <Link to="/"> Home</Link>
                         </li>
                         <li>
-                            <Link to="produtos"> Produtos</Link>
+                            <p> Produtos</p>
                         </li>
                         <li>
                             <p>Prazo de Entregas</p>
