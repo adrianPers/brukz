@@ -111,7 +111,7 @@ button svg{
 
     .menuHeader li{
         display: inline-block;
-        border-block: 1px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgb(0, 0, 0);
         width: 100%;
         font-weight: auto;
         flex: 0;

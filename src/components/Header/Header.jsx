@@ -59,7 +59,7 @@ const Header = () => {
                             <p> Produtos</p>
                         </li>
                         <li>
-                            <p>Prazo de Entregas</p>
+                            <p>Prazos de entrega</p>
                         </li>
                         <li>
                             <p>Dúvidas</p>
