@@ -1,16 +1,129 @@
-
-.footer{
+.footer {
     background-color: black;
-
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.containerFooter{
+.containerFooter {
     width: 100%;
-    max-width: 700px;
+    max-width: 2000px;
     height: 100%;
     border-inline: 1px solid white;
     color: white;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.contentFooter {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contentFooter> div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: aqua; */
+
+}
+
+.contentFooter ul {
+    list-style: none;
+    transition: 0.5s !important;
+    height: auto;
+    overflow: hidden;
+}
+
+.contentFooter button {
+    background-color: transparent;
+    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* background-color: red; */
+}
+
+.contentFooter button svg {
+    height: 1.2rem;
+}
+
+.contentFooter li {
+    /* border: 1px solid white; */
+    padding: 5px;
+    /* background-color: aqua; */
+    margin-block: 2px;
+
+}
+
+.containerLegal{
+    border-top: 1px white solid;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+@keyframes aparecer {
+
+    0% {
+        height: 0px;
+    }
+
+    99% {
+        height: 200px;
+    }
+
+    100% {
+        height: auto;
+    }
+
+}
+
+@keyframes ocultar {
+
+    0% {
+        height: auto;
+    }
+
+    1% {
+        height: 200px;
+    }
+
+    100% {
+        height: 0px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .contentFooter {
+        flex-direction: column;
+    }
+
+    .contentFooter > div {
+        width: 100%;
+    }
+
+    .contentFooter ul {
+        overflow: hidden;
+    }
+
+    .aparecer {
+        animation: aparecer 0.5s forwards;
+        /* background-color: pink; */
+    }
+
+    .ocultar {
+        animation: ocultar 0.5s forwards linear;
+        /* background-color: aqua; */
+    }
+
 }

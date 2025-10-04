@@ -56,7 +56,7 @@ header{
 
 }
 
-.menuHeader li > p{
+.menuHeader li >p{
     display: block;
     width: 100%;
     padding: 5px;
@@ -64,7 +64,7 @@ header{
     color: white;
 }
 
-button{
+.header button{
     background-color: transparent;
     cursor: pointer;
     border: 0px;

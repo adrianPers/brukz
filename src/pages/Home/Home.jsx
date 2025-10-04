@@ -19,6 +19,7 @@ const Home = () => {
     return (
         <div className={styles.home} >
             <Page>
+                <h2>Home</h2>
             </Page>
         </div>
     )

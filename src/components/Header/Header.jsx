@@ -6,6 +6,8 @@ import logo from "../../assets/logo-bz.png";
 
 import { useState } from "react";
 
+import { Link } from "react-router";
+
 
 // icons
 import { BsCart2, BsList, BsX, BsPerson } from "react-icons/bs";
@@ -53,10 +55,12 @@ const Header = () => {
                             </button>
                         </li>
                         <li>
-                            <p> Home</p>
+                            <Link to="/"
+                            ><p>Home</p></Link>
                         </li>
                         <li>
-                            <p> Produtos</p>
+                            <Link to="/produtos/teste"
+                            >Produtos</Link>
                         </li>
                         <li>
                             <p>Prazos de entrega</p>
@@ -65,7 +69,8 @@ const Header = () => {
                             <p>Dúvidas</p>
                         </li>
                         <li>
-                            <p>Contatos</p>
+                            <Link to="/contato/nome"
+                            >Contato</Link>
                         </li>
                     </ul>
                 </nav>

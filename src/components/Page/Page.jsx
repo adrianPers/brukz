@@ -13,6 +13,8 @@ const Page = (props) => {
 
                 <div className={styles.containerMain}>
 
+                    {props.children}
+
                     <div className={styles.teste}>
                         Conteúdo
                     </div>
