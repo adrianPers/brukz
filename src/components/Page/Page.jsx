@@ -15,32 +15,7 @@ const Page = (props) => {
 
                     {props.children}
 
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-                     <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
-                    <div className={styles.teste}>
-                        Conteúdo
-                    </div>
+                    
 
                 </div>
 

@@ -2,7 +2,7 @@
 import styles from "./Header.module.css";
 
 //  imagens
-import logo from "../../assets/logo-bz.png";
+import logo from "../../assets/icon-bz.png";
 
 import { useState } from "react";
 
@@ -55,22 +55,29 @@ const Header = () => {
                             </button>
                         </li>
                         <li>
-                            <Link to="/"
-                            ><p>Home</p></Link>
+                            <Link to="/">
+                                <p>Home</p>
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/produtos/teste"
-                            >Produtos</Link>
+                            <Link to="/produtos">
+                                <p>Produtos</p>
+                            </Link>
                         </li>
                         <li>
-                            <p>Prazos de entrega</p>
+                            <Link to="/">
+                                <p>Prazos de Entrega</p>
+                            </Link>
                         </li>
                         <li>
-                            <p>Dúvidas</p>
+                            <Link>
+                                <p>Duvidas</p>
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/contato/nome"
-                            >Contato</Link>
+                            <Link to="/contato">
+                                <p>Contato</p>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

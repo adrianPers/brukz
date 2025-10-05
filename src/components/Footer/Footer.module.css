@@ -9,10 +9,9 @@
     width: 100%;
     max-width: 2000px;
     height: 100%;
-    border-inline: 1px solid white;
     color: white;
     transition: 0.5s;
-    padding: 10px;
+    padding: 20px;
 }
 
 .contentFooter {
