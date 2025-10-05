@@ -1,19 +1,14 @@
 
 .boxProduct{
-    /* background-color: aquamarine; */
     padding: 10px;
     display: flex;
-    /* align-items: center; */
     justify-content: center; 
-    border: 1px solid;
     flex-wrap: wrap;
 }
 
 .boxImgsProduct{
-    /* background-color: blue; */
     padding: 10px;
     flex-shrink: 1;
-    /* flex: 1; */
     width: 40%;
     display: flex;
     align-items: center;
@@ -21,24 +16,15 @@
 }
 
 .boxImgsProduct img{
-
     width: 100%;
-    
-
-    
-    
 }
-
 
 /* Informações do produto */
 
-
 .boxInfoProduct{
-    /* background-color: antiquewhite; */
     padding: 10px;
     flex: 1;
     max-width: 400px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +48,6 @@
     gap: 10px;
 }
 
-
 .price{
     font-size: 160%;
     font-weight: bolder;
@@ -72,7 +57,6 @@
 .priceOri{
     color: gray;
     text-decoration: line-through;
-    /* font-weight: bolder; */
     font-size: 110%;
 }
 
@@ -86,9 +70,6 @@
     color: rgb(3, 98, 153);
 }
 
-.boxBtnsSize{
-    /* background-color: blue; */
-}
 
 .btnSize{
     padding: 5px;
@@ -104,7 +85,6 @@
     color: white;
 }
 
-
 .boxBuy{
     border: 1px solid;
     display: flex;
@@ -117,7 +97,7 @@
 }
 
 .btnQuant{
-    padding: 5px 10px;
+    padding: 5px 15px;
     border: 0px;
     font-size: 150%;
     background-color: white;
@@ -133,7 +113,6 @@
     color: white;
     flex: 1;
     font-size: 110%;
-    /* animation: balancar 2s infinite linear; */
 }
 
 .btnFreight{
@@ -146,7 +125,6 @@
 }
 
 .boxFreight{
-    /* background-color: rgb(255, 0, 0); */
     display: flex;
     padding: 10px 0px 0px 10px;
     margin-bottom: 10px;
@@ -157,7 +135,6 @@
     transition: 1s;
 }
 
-
 .hidden{
     animation: hidden 1s forwards linear;
 }
@@ -165,7 +142,6 @@
 .visible{
     animation: visible 1s forwards linear;
 }
-
 
 .sizeInds{
     opacity: 0.2;
@@ -185,13 +161,10 @@
     
 }
 
-
 @keyframes visible {
-
     100%{
         height: auto;
     }
-    
 }
 
 .boxFreight p {

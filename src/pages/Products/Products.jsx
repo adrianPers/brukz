@@ -6,35 +6,22 @@ import styles from "./Products.module.css";
 
 const Products = () => {
 
-    //     const teste = {
-    //     "id" : 1,
-    //     "title" : "Air Max Plus Tn 'Black' Ori pai!!!",
-    //     "price" : "222.32", 
-    //     "target" : "Masculino",
-    //     "category" : "calçados",
-    //     "subcategory" : "Tênis Esportivo",
-    //     "mark" : "Nike",
-    //     "variations": [
-    //         {
-    //             "color": "Preto",
-    //             "sizes": [
-    //                 38, 39, 40, 41, 42
-    //             ]
-    //         },
-    //         {
-    //             "color": "Branco e Azul",
-    //             "sizes": [
-    //                 37, 38, 40, 43
-    //             ]
-    //         }
-    //     ],
-    //     "images" : [
-    //         "https://",
-    //         "https://",
-    //         "https://",
-    //         "https://"
-    //     ]
-    // }
+        const teste = {
+        "id" : 1,
+        "title" : "Air Max Plus Tn 'Black' Ori pai!!!",
+        "price" : "252,99", 
+        "target" : "Masculino",
+        "category" : "calçados",
+        "subcategory" : "Tênis Esportivo",
+        "mark" : "Nike",
+        "sizes": [ 38, 39, 40, 41, 42 ],
+        "images" : [
+            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
+            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
+            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
+            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp"
+        ]
+    }
 
     return (
         <div className={styles.Products}>
@@ -49,15 +36,15 @@ const Products = () => {
 
                         <p>Início . Nike . Air Max Tn . Air Max Tn "Black Metalic"</p>
 
-                        <h2>Air Max Plus Tn "Black" Ori pai!!!</h2>
+                        <h2>{teste.title}</h2>
                         <div className={styles.infoPrice}>
 
                             <p>
-                                <span className={styles.price}>R$289,99</span>
-                                -52% off
+                                <span className={styles.price}>R${teste.price}</span>
+                                -50% off
                             </p>
 
-                            <span className={styles.priceOri}>R$599,99</span>
+                            <span className={styles.priceOri}>R$504,99</span>
 
                             <p>
                                 <span className={styles.pricePix}>R$260,99</span>
