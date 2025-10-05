@@ -1,9 +1,15 @@
 
+import { Navigation } from "swiper/modules";
 import Page from "../../components/Page/Page";
 // import ImgProduct from "";
 import styles from "./Products.module.css";
 // import { useParams } from "react-router";
 
+import { Swiper, SwiperSlide } from "swiper/react"
+
+
+// Icons
+import { BsShare } from "react-icons/bs"
 const Products = () => {
 
         const teste = {
@@ -28,8 +34,15 @@ const Products = () => {
             <Page>
                 <div className={styles.boxProduct}>
                     <div className={styles.boxImgsProduct}>
-                        <img alt="tn pai"
-                            src="https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp" />
+
+                        <Swiper pagination={{clickable:true}}>
+                            {teste.images.map((imageUrl) => (
+                                <SwiperSlide>
+                                    <img alt="image" src={imageUrl} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                       
                     </div>
 
                     <div className={styles.boxInfoProduct}>
@@ -98,7 +111,7 @@ const Products = () => {
                         </div>
 
                         <a href="#" className={styles.toShare}>
-                            icon Compartilhar
+                            <BsShare /> Compartilhar
                         </a>
 
                     </div>
