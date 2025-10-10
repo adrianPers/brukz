@@ -3,40 +3,51 @@ import { Navigation } from "swiper/modules";
 import Page from "../../components/Page/Page";
 // import ImgProduct from "";
 import styles from "./Products.module.css";
-// import { useParams } from "react-router";
+import { useParams } from "react-router";
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
-
 // Icons
 import { BsShare } from "react-icons/bs"
+
+// hooks
+import { useState, useEffect } from "react";
+
+import { getProducts, getOnlyProduct } from "../../services/api";
+
 const Products = () => {
 
-        const teste = {
-        "id" : 1,
-        "title" : "Air Max Plus Tn 'Black' Ori pai!!!",
-        "price" : "252,99", 
-        "target" : "Masculino",
-        "category" : "calçados",
-        "subcategory" : "Tênis Esportivo",
-        "mark" : "Nike",
-        "sizes": [ 38, 39, 40, 41, 42 ],
-        "images" : [
-            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
-            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
-            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp",
-            "https://acdn-us.mitiendanube.com/stores/005/592/482/products/6613250e-042a-4267-89df-e0e0f0f2ce80-7bc708430eaa87da2717497508470086-1024-1024.webp"
-        ]
-    }
+        const [product, setProduct] = useState();
+
+        const { name } = useParams();
+
+
+    
+        useEffect(() => {
+    
+            const fetchProduct = async () => {
+                const response = await getOnlyProduct(name);
+                setProduct(response);
+            }
+
+            if(name){
+
+                fetchProduct();
+                console.log('carregou')
+            }
+    
+    
+    
+        }, []);
 
     return (
         <div className={styles.Products}>
             <Page>
-                <div className={styles.boxProduct}>
+               {product && ( <div className={styles.boxProduct}>
                     <div className={styles.boxImgsProduct}>
 
                         <Swiper pagination={{clickable:true}}>
-                            {teste.images.map((imageUrl) => (
+                            {product.images.map((imageUrl) => (
                                 <SwiperSlide>
                                     <img alt="image" src={imageUrl} />
                                 </SwiperSlide>
@@ -47,13 +58,15 @@ const Products = () => {
 
                     <div className={styles.boxInfoProduct}>
 
-                        <p>Início . Nike . Air Max Tn . Air Max Tn "Black Metalic"</p>
+                        <p> Home . {product.subcategory} . {product.mark} . {product.title}</p>
 
-                        <h2>{teste.title}</h2>
+                        <h2>{product.title}</h2>
                         <div className={styles.infoPrice}>
 
                             <p>
-                                <span className={styles.price}>R${teste.price}</span>
+                                <span className={styles.price}>
+                                    R${product.price.toString().replace(".", ",")}
+                                </span>
                                 -50% off
                             </p>
 
@@ -115,7 +128,7 @@ const Products = () => {
                         </a>
 
                     </div>
-                </div>
+                </div>)}
             </Page>
         </div>
     )
