@@ -4,10 +4,10 @@ import styles from './Product.module.css'
 // import ImgProduto from '../../assets/img-produto.jpg'
 import { Link } from 'react-router'
 
-const Product = ({ title, price, imgUrl, name }) => {
+const Product = ({ title, price, imgUrl, name , category, subcategory}) => {
     return (
         <div className={styles.boxProduct}>
-            <Link to={`/produtos/${name}`}>
+            <Link to={`/produtos/${category}/${subcategory}/${name}`}>
 
 
                 <button

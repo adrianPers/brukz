@@ -19,14 +19,14 @@ const Products = () => {
 
         const [product, setProduct] = useState();
 
-        const { name } = useParams();
+        const { category, subcategory, name } = useParams();
 
 
     
         useEffect(() => {
     
             const fetchProduct = async () => {
-                const response = await getOnlyProduct(name);
+                const response = await getOnlyProduct(category, subcategory, name);
                 setProduct(response);
             }
 

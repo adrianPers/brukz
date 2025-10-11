@@ -51,6 +51,8 @@ const Home = () => {
                                     <Product
                                         name={product.name}
                                         title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
                                         price={product.price}
                                         imgUrl={product.images[0]}
                                     />
@@ -58,14 +60,17 @@ const Home = () => {
                 </div>)))}</Swiper>
 
                 <h2>Produtos</h2>
-                <Swiper slidesPerView={4} pagination>
+                <Swiper slidesPerView={4} pagination
+                navigation={{clicable: true}}>
                     {products && (
                         products.map((product) => (
                             <div key={product.id}>
                                 {<SwiperSlide>
                                     <Product
-                                        id={product.id}
+                                        name={product.name}
                                         title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
                                         price={product.price}
                                         imgUrl={product.images[0]}
                                     />
