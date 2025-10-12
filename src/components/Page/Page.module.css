@@ -17,7 +17,7 @@
 
 .containerMain{
     width: 100%;
-    max-width: 2000px;
+    max-width: 1500px;
     flex: 1;
     padding-inline: 20px;
 }

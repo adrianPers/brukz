@@ -8,7 +8,7 @@ import Product from "../../components/Product/Product.jsx";
 
 
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 
 // functions
 import { getProducts } from "../../services/api.js";
@@ -17,11 +17,13 @@ import { getProducts } from "../../services/api.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
+
 // import imgsds from ''
 
 const Home = () => {
 
     const [products, setProducts] = useState();
+    const [slidePerView, setSlidePerView] = useState(4);
 
     useEffect(() => {
 
@@ -30,9 +32,21 @@ const Home = () => {
             setProducts(response)
         }
 
-        fetchProducts();
+        const handleResize = () => {
+            if(window.innerWidth <= 720) {
+                setSlidePerView(1);
+            } else {
+                setSlidePerView(4);
+            }
+        }
 
-        console.log('carregou')
+        fetchProducts();
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
 
     }, []);
 
@@ -40,10 +54,11 @@ const Home = () => {
         <div className={styles.home} >
             <Page>
 
-                <h2>Hoe</h2>
+                <h2>Mais vendidos</h2>
 
-                <Swiper slidesPerView={4} pagination
-                navigation={{clicable: true}}>
+                <Swiper 
+                    slidesPerView={slidePerView} 
+                    pagination>
                     {products && (
                         products.map((product) => (
                             <div key={product.id}>
@@ -60,8 +75,7 @@ const Home = () => {
                 </div>)))}</Swiper>
 
                 <h2>Produtos</h2>
-                <Swiper slidesPerView={4} pagination
-                navigation={{clicable: true}}>
+                <Swiper slidesPerView={slidePerView} pagination>
                     {products && (
                         products.map((product) => (
                             <div key={product.id}>

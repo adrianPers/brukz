@@ -17,7 +17,7 @@ import { getProducts, getOnlyProduct } from "../../services/api";
 
 const Products = () => {
 
-        const [product, setProduct] = useState();
+        const [ product, setProduct ] = useState();
 
         const { category, subcategory, name } = useParams();
 
@@ -31,13 +31,10 @@ const Products = () => {
             }
 
             if(name){
-
                 fetchProduct();
                 console.log('carregou')
             }
-    
-    
-    
+
         }, []);
 
     return (
@@ -46,7 +43,9 @@ const Products = () => {
                {product && ( <div className={styles.boxProduct}>
                     <div className={styles.boxImgsProduct}>
 
-                        <Swiper pagination={{clickable:true}}>
+                        <Swiper 
+                        pagination={{clickable:true}}
+                        autoplay={3000}>
                             {product.images.map((imageUrl) => (
                                 <SwiperSlide>
                                     <img alt="image" src={imageUrl} />

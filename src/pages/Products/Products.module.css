@@ -9,7 +9,7 @@
 .boxImgsProduct{
     padding: 10px;
     flex-shrink: 1;
-    width: 40%;
+    width: 35%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -195,42 +195,20 @@
 
 @keyframes balancar {
 
-    0%{
-        transform: rotate(0deg);
-    }
+    0%{transform: rotate(0deg)}
+    49%{transform: rotate(0deg)}
+    50%{transform: rotate(5deg)}
+    60%{transform: rotate(-5deg)}
+    70%{transform: rotate(5deg)}
+    80%{transform: rotate(-5deg)}
+    90%{transform: rotate(5deg)}
+    100%{transform: rotate(0deg)}
 
-    49%{
-        transform: rotate(0deg);
-    }
-
-    50%{
-        transform: rotate(5deg);
-    }
-
-    60%{
-        transform: rotate(-5deg);
-    }
-
-    70%{
-        transform: rotate(5deg);
-    }
-
-    80%{
-        transform: rotate(-5deg);
-    }
-
-    90%{
-        transform: rotate(5deg);
-    }
-
-    100%{
-        transform: rotate(0deg);
-    }
-    
 }
 
 @media screen and (max-width: 700px) {
 
+  
     
 .boxImgsProduct{
     width: 100%;
@@ -245,7 +223,7 @@
 }
 
 .boxProduct{
-    padding: 0px;
+    padding-top: 20px;
 }
 
 }
