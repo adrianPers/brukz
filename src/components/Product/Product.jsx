@@ -8,8 +8,6 @@ const Product = ({ title, price, imgUrl, name , category, subcategory}) => {
     return (
         <div className={styles.boxProduct}>
             <Link to={`/produtos/${category}/${subcategory}/${name}`}>
-
-
                 <button
                     className={styles.product}>
 

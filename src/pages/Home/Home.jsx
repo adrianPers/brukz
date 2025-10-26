@@ -23,7 +23,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Home = () => {
 
     const [products, setProducts] = useState();
-    const [slidePerView, setSlidePerView] = useState(4);
+    const [slidePerView, setSlidePerView] = useState(5);
 
     useEffect(() => {
 
@@ -36,7 +36,7 @@ const Home = () => {
             if(window.innerWidth <= 720) {
                 setSlidePerView(1);
             } else {
-                setSlidePerView(4);
+                setSlidePerView(5);
             }
         }
 
@@ -54,11 +54,38 @@ const Home = () => {
         <div className={styles.home} >
             <Page>
 
-                <h2>Mais vendidos</h2>
+                <div className={styles.banner}>
+                    <h1>Banner</h1>
+                </div>
 
+                <div className={styles.categorys}>
+                    <span>Roupas</span>
+                    <span>Sapatos</span>
+                    <span>Acessórios</span>
+                   
+                </div>
+
+                <h2>Mais vendidos</h2>
                 <Swiper 
                     slidesPerView={slidePerView} 
                     pagination>
+                    {products && (
+                        products.map((product) => (
+                            <div key={product.id}>
+                                {<SwiperSlide>
+                                    <Product
+                                        name={product.name}
+                                        title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
+                                        price={product.price}
+                                        imgUrl={product.images[0]}
+                                    />
+                                </SwiperSlide>}
+                </div>)))}</Swiper>
+
+                 <h2>Ofertas</h2>
+                <Swiper slidesPerView={slidePerView} pagination>
                     {products && (
                         products.map((product) => (
                             <div key={product.id}>
@@ -90,6 +117,48 @@ const Home = () => {
                                     />
                                 </SwiperSlide>}
                 </div>)))}</Swiper>
+
+                 <h2>Produtos</h2>
+                <Swiper slidesPerView={slidePerView} pagination>
+                    {products && (
+                        products.map((product) => (
+                            <div key={product.id}>
+                                {<SwiperSlide>
+                                    <Product
+                                        name={product.name}
+                                        title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
+                                        price={product.price}
+                                        imgUrl={product.images[0]}
+                                    />
+                                </SwiperSlide>}
+                </div>)))}</Swiper>
+                
+                <h2>Lançamentos</h2>
+                <Swiper slidesPerView={slidePerView} pagination>
+                    {products && (
+                        products.map((product) => (
+                            <div key={product.id}>
+                                {<SwiperSlide>
+                                    <Product
+                                        name={product.name}
+                                        title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
+                                        price={product.price}
+                                        imgUrl={product.images[0]}
+                                    />
+                                </SwiperSlide>}
+                </div>)))}</Swiper>
+
+                <div className={styles.feedBacks}>
+                    feedBacks
+                </div>
+
+                 <div className={styles.banner}>
+                    <h1>Banner</h1>
+                </div>
 
             </Page>
         </div>

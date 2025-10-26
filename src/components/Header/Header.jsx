@@ -28,11 +28,13 @@ const Header = () => {
                     <BsList />
                 </button>
 
+                <Link to="/">
                 <img className={styles.logoHeader}
                     src={logo}
                     alt="logo da loja"
                     title="logo da loja" 
-                />
+                    />
+                </Link>
 
               
                     <button>

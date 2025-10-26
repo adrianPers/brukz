@@ -1,11 +1,10 @@
 
-import { Navigation } from "swiper/modules";
-import Page from "../../components/Page/Page";
 // import ImgProduct from "";
 import styles from "./Products.module.css";
 import { useParams } from "react-router";
 
 import { Swiper, SwiperSlide } from "swiper/react"
+// import { Navigation } from "swiper/modules";
 
 // Icons
 import { BsShare } from "react-icons/bs"
@@ -15,9 +14,14 @@ import { useState, useEffect } from "react";
 
 import { getProducts, getOnlyProduct } from "../../services/api";
 
+// components
+import Product from "../../components/Product/Product";
+import Page from "../../components/Page/Page";
+
 const Products = () => {
 
         const [ product, setProduct ] = useState();
+        const [ products, setProducts ] = useState();
 
         const { category, subcategory, name } = useParams();
 
@@ -25,14 +29,18 @@ const Products = () => {
     
         useEffect(() => {
     
-            const fetchProduct = async () => {
-                const response = await getOnlyProduct(category, subcategory, name);
-                setProduct(response);
+            const fetchProducts = async () => {
+                // const response = await getOnlyProduct(category, subcategory, name);
+                const [res01, res02] = await Promise.all([
+                    getOnlyProduct(category, subcategory, name),
+                    getProducts()
+                ])
+                setProduct(res01);
+                setProducts(res02);
             }
 
             if(name){
-                fetchProduct();
-                console.log('carregou')
+                fetchProducts();
             }
 
         }, []);
@@ -128,6 +136,23 @@ const Products = () => {
 
                     </div>
                 </div>)}
+
+                <h2>Semelhantes</h2>
+                <Swiper slidesPerView={4} pagination>
+                    {products && (
+                        products.map((product) => (
+                            <div key={product.id}>
+                                {<SwiperSlide>
+                                    <Product
+                                        name={product.name}
+                                        title={product.title}
+                                        category={product.category}
+                                        subcategory={product.subcategory}
+                                        price={product.price}
+                                        imgUrl={product.images[0]}
+                                    />
+                                </SwiperSlide>}
+                </div>)))}</Swiper>
             </Page>
         </div>
     )

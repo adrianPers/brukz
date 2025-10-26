@@ -6,7 +6,6 @@ const urlApi = "https://api-ecomerce-lovat.vercel.app";
 export const getProducts = async () => {
 
     try{
-
         const response = await fetch(urlApi);
 
         if(!response.ok){
