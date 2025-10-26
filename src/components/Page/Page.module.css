@@ -25,3 +25,10 @@
 .teste{
     height: 20vh;
 }
+
+
+@media screen and (max-width: 650px) {
+    .containerMain{
+        padding: 0px;
+    }
+}

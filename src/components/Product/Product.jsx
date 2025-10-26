@@ -15,8 +15,8 @@ const Product = ({ title, price, imgUrl, name , category, subcategory}) => {
                         <img
                             className={styles.imgProduto}
                             src={imgUrl}
-                            alt='imagem do produto'
-                            title='imagem do produto'
+                            alt={title}
+                            title={title}
                         />
                     </div>
 

@@ -34,7 +34,7 @@ const Home = () => {
 
         const handleResize = () => {
             if(window.innerWidth <= 720) {
-                setSlidePerView(1);
+                setSlidePerView(2);
             } else {
                 setSlidePerView(5);
             }
